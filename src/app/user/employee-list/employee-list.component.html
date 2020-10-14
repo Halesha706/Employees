@@ -1,0 +1,46 @@
+<div class="card">
+  <div class="card-header row">
+    <h5 class="col">Employee List
+      <div *ngIf="isProfileLoad" class="spinner-border text-primary ml-2" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </h5>
+    <div class="col-2">
+      <button class="btn btn-outline-primary" routerLink="/dashboard/add-employee">Add Employee</button>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="row row-header">
+      <div class="col col-md-1 pl-0" style="text-align: center;">#</div>
+      <div class="col col-md-2">Name</div>
+      <div class="col col-md-2">Last Name</div>
+      <div class="col col-md">Email</div>
+      <div class="col col-md-2">Phone & Address</div>
+      <div class="col col-md-2">Action</div>
+    </div>
+    <div *ngFor="let item of employees;let i=index" class="row border-bottom p-2">
+      <div class="col col-md-1 " style="text-align: center;">{{(i+1)}}</div>
+      <div class="col col-md-2">{{item.firstName}}</div>
+      <div class="col col-md-2">{{item.lastName}}</div>
+      <div class="col col-md">{{item.email}}</div>
+      <div class="col col-md-2">
+        <strong>Phone</strong><br/>
+        {{item.phone}}
+        <br/><strong>Address</strong><br/>
+        {{item?.address?.address}}
+      </div>
+      <div class="col col-md-2">
+        <button class="btn btn-primary" [routerLink]="['/dashboard/add-employee/'+item.id]">
+          <i class="fa fa-edit"></i>
+        </button>
+        <button class="btn btn-outline-danger ml-1" (click)="deleteUser(item)">
+          <i class="fa fa-trash"></i>
+        </button>
+
+      </div>
+    </div>
+    <div *ngIf="employees.length==0" class="align-center">
+      <span class="text-danger">No Records</span>
+    </div>
+  </div>
+</div>

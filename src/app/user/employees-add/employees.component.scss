@@ -1,0 +1,60 @@
+:host{
+  .align-center{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  .image-card{
+    width: 150px;
+    height: 150px;
+    box-shadow: 10px 10px 5px grey;
+  }
+
+  .image-view{
+    display: inline-grid;
+  }
+
+  .spinner-border{
+    height: 21px !important;
+    width: 21px !important;
+  }
+
+  .trash{
+    float: right;
+    position: relative;
+    bottom: -16px;
+    right: -8px;
+    z-index: 2;
+    padding: 3px;
+    background-color: white;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .edit{
+    position: relative;
+    top: -13px;
+    right: -11px;
+    z-index: 2;
+    padding: 3px;
+    background-color: white;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    float: right;
+  }
+
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .cursor-enable{
+    cursor: pointer;
+  }
+
+}

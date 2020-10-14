@@ -26,10 +26,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('AddEmployee2Round');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('AddEmployee2Round app is running!');
-  });
 });
