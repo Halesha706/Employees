@@ -18,7 +18,7 @@ export class GoogleMapComponent implements OnInit {
   longitude: any;
   zone: number;
   constructor(
-    private apiloader: MapsAPILoader,
+    public apiloader: MapsAPILoader,
     private ngZone: NgZone
   ) {
   }

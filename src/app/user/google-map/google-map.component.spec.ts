@@ -1,4 +1,5 @@
 import { MapsAPILoader } from '@agm/core';
+// import { NgZone } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { GoogleMapComponent } from './google-map.component';
@@ -14,6 +15,9 @@ describe('GoogleMapComponent', () => {
         {
           provide: MapsAPILoader, useClass: GoogleMaps
         },
+        // {
+        //   provide: NgZone, useClass: NgZoneClass
+        // }
       ]
     })
       .compileComponents();
@@ -33,3 +37,7 @@ describe('GoogleMapComponent', () => {
 class GoogleMaps {
 
 }
+
+// class NgZoneClass {
+
+// }

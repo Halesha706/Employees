@@ -26,7 +26,7 @@ export class EmployeesComponent implements OnInit {
     private toastr: ToastrService,
     private sanitizer: DomSanitizer,
     private router: Router,
-    private activateRouter: ActivatedRoute
+    public activateRouter: ActivatedRoute
   ) { }
   /**
    * ngOnInit create the form and when get the paramId called the patchValue function
@@ -59,7 +59,8 @@ export class EmployeesComponent implements OnInit {
       ])],
       phone: ['', Validators.compose([
         Validators.required,
-        Validators.minLength(10)
+        Validators.minLength(10),
+        Validators.maxLength(10)
       ])],
       address: [{}],
       profile: ['']

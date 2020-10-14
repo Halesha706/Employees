@@ -2,7 +2,7 @@
   <div class="card-header row">
     <h5 class="col">Employee List
       <div *ngIf="isProfileLoad" class="spinner-border text-primary ml-2" role="status">
-        <span class="sr-only">Loading...</span>
+        <span class="sr-only"></span>
       </div>
     </h5>
     <div class="col-2">
@@ -24,9 +24,9 @@
       <div class="col col-md-2">{{item.lastName}}</div>
       <div class="col col-md">{{item.email}}</div>
       <div class="col col-md-2">
-        <strong>Phone</strong><br/>
+        <strong>Phone</strong><br />
         {{item.phone}}
-        <br/><strong>Address</strong><br/>
+        <br /><strong>Address</strong><br />
         {{item?.address?.address}}
       </div>
       <div class="col col-md-2">
